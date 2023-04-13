@@ -1,17 +1,26 @@
 const $numerosDeLista = document.querySelectorAll("li")
 const $botonCalcularDatos = document.querySelector("#boton-calcular-datos")
+const $promedio = document.querySelector("#promedio")
+const $numeroMayor = document.querySelector("#numero-mas-grande")
+const $numeroMenor = document.querySelector("#numero-mas-pequenio")
+const $numeroMasFrecuente = document.querySelector("#numero-mas-frecuente")
+
 
 $botonCalcularDatos.onclick = function() {
-    $numerosDeLista;
     let arrayNumerosDeLista = []
     for (let i = 0; i < $numerosDeLista.length; i++) {
         arrayNumerosDeLista.push (Number($numerosDeLista[i].textContent));
     }
     
-    calcularPromedio(arrayNumerosDeLista)
-    let numeroMayor = Number(Math.max(...arrayNumerosDeLista))
-    let numeroMenor = Number(Math.min(...arrayNumerosDeLista))
-    obtenerNumeroMasRepetido(arrayNumerosDeLista)
+    let promedio = calcularPromedio(arrayNumerosDeLista);
+    let numeroMayor = Number(Math.max(...arrayNumerosDeLista));
+    let numeroMenor = Number(Math.min(...arrayNumerosDeLista));
+    let numeroMasFrecuente = obtenerNumeroMasRepetido(arrayNumerosDeLista);
+
+    $promedio.textContent = `El promedio es ${promedio}`
+    $numeroMayor.textContent = `El numero mas grande es ${numeroMayor}`
+    $numeroMenor.textContent = `El numero mas pequeño es ${numeroMenor}`
+    $numeroMasFrecuente.textContent = `El numero mas frecuente es ${numeroMasFrecuente}`
 
     return numeroMayor, numeroMenor;
 }
@@ -50,5 +59,4 @@ function obtenerNumeroMasRepetido(arrayNumerosDeLista) {
     return numerosMasRepetidos;
 }
 
-const $promedio = document.querySelector("#promedio")
-$promedio.textContent = `El promedio es ${promedioDeLista}`
+
