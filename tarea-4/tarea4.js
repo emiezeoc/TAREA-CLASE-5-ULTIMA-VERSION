@@ -32,7 +32,7 @@ function calcularPromedio(arrayNumerosDeLista) {
         sumatoriaDeNumerosLista += arrayNumerosDeLista[i]
         promedioDeLista = sumatoriaDeNumerosLista/arrayNumerosDeLista.length               
     }
-return promedioDeLista;
+    return promedioDeLista;
 }
 
 function obtenerNumeroMasRepetido(arrayNumerosDeLista) {
@@ -58,5 +58,3 @@ function obtenerNumeroMasRepetido(arrayNumerosDeLista) {
         }
     return numerosMasRepetidos;
 }
-
-
