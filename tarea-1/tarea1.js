@@ -11,8 +11,3 @@ $botonCalcularSalarioMensual.onclick = function() {
 function calcularSalarioMensual(salarioAnual){
     return salarioAnual/12
 }
-
-
-
-
-
